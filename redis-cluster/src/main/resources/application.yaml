@@ -1,0 +1,26 @@
+logging:
+  level:
+    io.lettuce.core: debug
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
+
+spring:
+  data:
+    redis:
+      # 分片集群模式
+      cluster:
+        nodes:
+          - 192.168.41.128:7001
+          - 192.168.41.128:7002
+          - 192.168.41.128:7003
+          - 192.168.41.128:8001
+          - 192.168.41.128:8002
+          - 192.168.41.128:8003
+      # 哨兵模式
+#     password: 123456
+#     sentinel:
+#       master: mymaster
+#       nodes:
+#         - 192.168.41.128:27001
+#         - 192.168.41.128:27002
+#         - 192.168.41.128:27003
